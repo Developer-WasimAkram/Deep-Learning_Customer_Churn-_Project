@@ -64,11 +64,12 @@ prediction=model.predict(input_data_scaled)
 prediction_proba=prediction[0][0]
 
 st.write(f'The probability of the customer to churn is : { prediction_proba: 2f}')
-if prediction_proba > 0.5:
-    st.write('The customer is likely to churn.')
-else:
-    st.write('The customer is not likely to churn.')
-    
+if prediction_proba:
+    if prediction_proba > 0.5:
+        st.write('The customer is likely to churn.')
+    else:
+        st.write('The customer is not likely to churn.')
+        
     
     
     
