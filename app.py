@@ -20,7 +20,7 @@ with open('PickleModel/scaler.pkl','rb') as file:
     scaler=pickle.load(file)
     
 ## streamlit app
-st.title('Customer Churn Prediction')
+st.title('Customer Churn Prediction with ANN model')
 st.balloons()
 # User input
 
